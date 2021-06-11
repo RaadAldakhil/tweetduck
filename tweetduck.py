@@ -11,10 +11,10 @@ def main():
     api = create_api()
     
     # Generate duck fortune
-    stream = os.popen('fortune -n 130 | cowsay -f duck')
+    stream = os.popen('fortune -n 120 | cowsay -f duck')
     output = stream.read()
     # Create a tweet
-    api.update_status(output)
+    api.update_status(output.append(" \n-Made with Tweepy"))
 
 if __name__ == "__main__":
     main()
