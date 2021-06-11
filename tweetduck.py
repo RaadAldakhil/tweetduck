@@ -12,7 +12,7 @@ def main():
     
     # Generate duck fortune
     stream = os.popen('fortune -n 130 | cowsay -f duck')
-    output = stream.readLines()
+    output = stream.read()
     # Create a tweet
     api.update_status(output)
 
