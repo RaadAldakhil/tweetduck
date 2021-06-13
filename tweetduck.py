@@ -11,7 +11,7 @@ def main():
     api = create_api()
     
     # Generate duck fortune
-    stream = os.popen('fortune -n 120 | cowsay -f duck')
+    stream = os.popen('fortune -n 90 | cowsay -f duck')
     output = stream.read()
     # Create a tweet
     api.update_status(output + "\n-Made with Tweepy")
