@@ -9,12 +9,16 @@ logger = logging.getLogger()
 
 def main():
     api = create_api()
-    
+    output = ""
+
+    while len(output) > 280 or len(output) == 0;
+
     # Generate duck fortune
-    stream = os.popen('fortune -n 90 | cowsay -f duck')
-    output = stream.read()
+    stream = os.popen('fortune -s')
+    output = stream.read() + "\ \n  \ \n   \  >()_ \n     (__)__ _\n-Posted by Tweepy"
+
     # Create a tweet
-    api.update_status(output + "\n-Made with Tweepy")
+    api.update_status(output)
 
 if __name__ == "__main__":
     main()
