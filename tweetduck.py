@@ -11,11 +11,10 @@ def main():
     api = create_api()
     output = ""
 
-    while len(output) > 280 or len(output) == 0;
-
-    # Generate duck fortune
-    stream = os.popen('fortune -s')
-    output = stream.read() + "\ \n  \ \n   \  >()_ \n     (__)__ _\n-Posted by Tweepy"
+    while len(output) > 280 or len(output) == 0:
+        # Generate duck fortune
+        stream = os.popen('fortune -s')
+        output = stream.read() + "\ \n  \ \n   \  >()_ \n     (__)__ _\n-Posted by Tweepy"
 
     # Create a tweet
     api.update_status(output)
